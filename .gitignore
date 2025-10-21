@@ -14,7 +14,10 @@ env/
 results/
 *.json
 *.txt
-*.md
+
+# Ignore Markdown reports but keep README
+results/*.md
+!README.md
 
 # --- Config / Keys (keep secrets private) ---
 .env
