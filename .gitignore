@@ -1,0 +1,31 @@
+# --- Python cache and environment ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+
+# --- Results and output files ---
+results/
+*.json
+*.txt
+*.md
+
+# --- Config / Keys (keep secrets private) ---
+.env
+config.py
+
+# --- System / Editor files ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Backup / Temporary files ---
+*.bak
+*.tmp
