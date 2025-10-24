@@ -12,11 +12,14 @@ env/
 
 # --- Results and output files ---
 results/
+runs/
+processed/
 *.json
 *.txt
 
 # Ignore Markdown reports but keep README
 results/*.md
+runs/*.md
 !README.md
 
 # --- Config / Keys (keep secrets private) ---

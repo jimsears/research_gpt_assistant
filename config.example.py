@@ -5,23 +5,21 @@
 import os
 from dotenv import load_dotenv
 
+# Load environment variables if present
+load_dotenv()
+
 class Config:
-    def __init__(self):
-        # Load environment variables if present
-        load_dotenv()
+    # Mistral API settings
+    MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY", "your_api_key_here")
+    MODEL_NAME = os.getenv("MISTRAL_MODEL", "mistral-large-latest")
+    TEMPERATURE = float(os.getenv("TEMPERATURE", "0.1"))
+    MAX_TOKENS = int(os.getenv("MAX_TOKENS", "1000"))
 
-        # Mistral API settings
-        self.MISTRAL_API_KEY = "your_api_key_here"  # Replace with your actual key
-        self.MODEL_NAME = "mistral-medium"
-        self.TEMPERATURE = 0.1
-        self.MAX_TOKENS = 1000
+    # Directory paths
+    SAMPLE_PAPERS_DIR = os.getenv("SAMPLE_PAPERS_DIR", "data/sample_papers/")
+    PROCESSED_DIR = os.getenv("PROCESSED_DIR", "processed/")
+    RESULTS_DIR = os.getenv("RESULTS_DIR", "runs/")
 
-        # Directory paths
-        self.DATA_DIR = "data/"
-        self.SAMPLE_PAPERS_DIR = "data/sample_papers/"
-        self.PROCESSED_DIR = "data/processed/"
-        self.RESULTS_DIR = "results/"
-
-        # Processing parameters
-        self.CHUNK_SIZE = 1000
-        self.OVERLAP = 100
+    # Processing parameters
+    CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
+    OVERLAP = int(os.getenv("OVERLAP", "100"))
