@@ -16,6 +16,8 @@ runs/
 processed/
 *.json
 *.txt
+!requirements.txt
+
 
 # Ignore Markdown reports but keep README
 results/*.md
